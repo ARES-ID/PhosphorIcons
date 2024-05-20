@@ -8,6 +8,7 @@ espressoCore = "3.5.1"
 appcompat = "1.6.1"
 material = "1.12.0"
 detekt = "1.23.6"
+kotlinter = "4.3.0"
 
 # Project configuration
 namespace = "com.rjspies.phosphoricons"
@@ -29,4 +30,5 @@ comGoogleAndroidMaterial-material = { group = "com.google.android.material", nam
 comAndroidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 comAndroidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 orgJetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-ioGitlabArturboschDetekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
+ioGitlabArturboschDetekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+orgJmailenKotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
