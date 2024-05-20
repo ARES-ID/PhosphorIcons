@@ -17,6 +17,8 @@ targetSdk = "34"
 compileSdk = "34"
 version = "1.0.0"
 versionCodeOffset = "20000"
+javaVersion = "21"
+javaVendor = "Oracle"
 
 [libraries]
 androidxCore-coreKtx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
