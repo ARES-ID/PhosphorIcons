@@ -28,12 +28,19 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.javaVersion.get()))
+        vendor.set(JvmVendorSpec.matching(libs.versions.javaVendor.get()))
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(libs.versions.javaVersion.get())
+        vendor = JvmVendorSpec.matching(libs.versions.javaVendor.get())
     }
 }
 
