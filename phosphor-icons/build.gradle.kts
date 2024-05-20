@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.comAndroidLibrary)
     alias(libs.plugins.orgJetbrainsKotlinAndroid)
     alias(libs.plugins.ioGitlabArturboschDetekt)
+    alias(libs.plugins.orgJmailenKotlinter)
 }
 
 android {
