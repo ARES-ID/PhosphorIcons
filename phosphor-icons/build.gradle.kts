@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.comAndroidLibrary)
+    alias(libs.plugins.orgJetbrainsKotlinAndroid)
+    alias(libs.plugins.ioGitlabArturboschDetekt)
 }
 
 android {
@@ -33,10 +34,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidxCore.coreKtx)
+    implementation(libs.androidxAppcompat.appcompat)
+    implementation(libs.comGoogleAndroidMaterial.material)
+    testImplementation(libs.junit.junit)
+    androidTestImplementation(libs.androidxTestExt.junit)
+    androidTestImplementation(libs.androidxTestEspresso.espressoCore)
 }

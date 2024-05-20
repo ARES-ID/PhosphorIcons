@@ -1,12 +1,13 @@
 [versions]
-agp = "8.4.1"
+androidGradlePlugin = "8.4.1"
 kotlin = "1.9.24"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
+junitExtensions = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
 material = "1.12.0"
+detekt = "1.23.6"
 
 # Project configuration
 namespace = "com.rjspies.phosphoricons"
@@ -17,15 +18,15 @@ version = "1.0.0"
 versionCodeOffset = "20000"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidxCore-coreKtx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit-junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidxTestExt-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitExtensions" }
+androidxTestEspresso-espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidxAppcompat-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+comGoogleAndroidMaterial-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "agp" }
-
+comAndroidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+comAndroidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+orgJetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ioGitlabArturboschDetekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
