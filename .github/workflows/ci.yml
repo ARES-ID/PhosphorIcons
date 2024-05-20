@@ -1,0 +1,48 @@
+name: CI
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ synchronize, opened, reopened, ready_for_review ]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: oracle
+
+      - name: Setup Android SDK
+        uses: amyu/setup-android@v4
+        with:
+          cache-disabled: true
+
+      - name: Detekt
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: detekt
+
+      - name: Kotlinter
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: lintKotlin
+
+      - name: Lint
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: lint
+
+      - name: Tests
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: test
+
+      - name: Assemble
+        uses: gradle/gradle-build-action@v3
+        with:
+          arguments: assembleRelease
