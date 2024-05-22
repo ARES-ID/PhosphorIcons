@@ -27,6 +27,9 @@ androidxTestExt-junit = { group = "androidx.test.ext", name = "junit", version.r
 androidxTestEspresso-espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidxAppcompat-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 comGoogleAndroidMaterial-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidxCompose-composeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidxCompose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidxActivity-activityKtx = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 
 [plugins]
 comAndroidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }

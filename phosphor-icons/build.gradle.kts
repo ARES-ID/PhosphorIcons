@@ -25,6 +25,14 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
+    }
 }
 
 kotlin {
@@ -42,6 +50,8 @@ java {
 }
 
 dependencies {
+    implementation(platform(libs.androidxCompose.composeBom))
+    implementation(libs.androidxCompose.material3)
     implementation(libs.androidxCore.coreKtx)
     implementation(libs.androidxAppcompat.appcompat)
     implementation(libs.comGoogleAndroidMaterial.material)
