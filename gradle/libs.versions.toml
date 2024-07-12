@@ -9,6 +9,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 detekt = "1.23.6"
 kotlinter = "4.4.0"
+material3 = "1.2.1"
 
 # Project configuration
 namespace = "com.rjspies.phosphoricons"
@@ -27,9 +28,7 @@ androidxTestExt-junit = { group = "androidx.test.ext", name = "junit", version.r
 androidxTestEspresso-espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidxAppcompat-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 comGoogleAndroidMaterial-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidxCompose-composeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
-androidxCompose-material3 = { group = "androidx.compose.material3", name = "material3" }
-androidxActivity-activityKtx = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidxCompose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 
 [plugins]
 comAndroidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -37,3 +36,4 @@ comAndroidLibrary = { id = "com.android.library", version.ref = "androidGradlePl
 orgJetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ioGitlabArturboschDetekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 orgJmailenKotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
+orgJetbrainsKotlinPluginCompose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

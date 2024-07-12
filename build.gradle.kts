@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.orgJetbrainsKotlinAndroid) apply false
     alias(libs.plugins.ioGitlabArturboschDetekt) apply false
     alias(libs.plugins.orgJmailenKotlinter) apply false
+    alias(libs.plugins.orgJetbrainsKotlinPluginCompose) apply false
 }

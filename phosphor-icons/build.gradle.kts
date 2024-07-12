@@ -1,8 +1,17 @@
+import java.net.URI
+
 plugins {
     alias(libs.plugins.comAndroidLibrary)
     alias(libs.plugins.orgJetbrainsKotlinAndroid)
     alias(libs.plugins.ioGitlabArturboschDetekt)
     alias(libs.plugins.orgJmailenKotlinter)
+    alias(libs.plugins.orgJetbrainsKotlinPluginCompose)
+    id("com.rjspies.fontue") version "1.0.0"
+}
+
+fontueConfiguration {
+    fontUri.set(URI.create("https://phosphoricons.com/assets/phosphor-icons.zip"))
+    targetDirectory.set(file("src/main/res/font"))
 }
 
 android {
@@ -20,7 +29,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
+                getDefaultProguardFile(name = "proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
         }
@@ -28,10 +37,6 @@ android {
 
     buildFeatures {
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
     }
 }
 
@@ -47,15 +52,4 @@ java {
         languageVersion = JavaLanguageVersion.of(libs.versions.javaVersion.get())
         vendor = JvmVendorSpec.matching(libs.versions.javaVendor.get())
     }
-}
-
-dependencies {
-    implementation(platform(libs.androidxCompose.composeBom))
-    implementation(libs.androidxCompose.material3)
-    implementation(libs.androidxCore.coreKtx)
-    implementation(libs.androidxAppcompat.appcompat)
-    implementation(libs.comGoogleAndroidMaterial.material)
-    testImplementation(libs.junit.junit)
-    androidTestImplementation(libs.androidxTestExt.junit)
-    androidTestImplementation(libs.androidxTestEspresso.espressoCore)
 }
